@@ -1,0 +1,41 @@
+
+    
+    <div class="container my-5 ">
+        <div class="row justify-content-center ">
+            <div class="col-lg-5">
+                <a class="btn btn-sm btn-primary" href="/student">back</a>
+                <br>
+                <br>
+                <div class="card">
+                    <div class="card-body">
+                        <h2>Add New Students</h2>
+                        <hr>
+                        <form action="/student/edit/<%= editStudentData._id %> " method="POST" enctype="multipart/form-data">
+                            <div class="my-3">
+                                <label for="">Name</label>
+                                <input value="<%= editStudentData.name %>" name="name" type="text" class="form-control">
+                            </div>
+                            <div class="my-3">
+                                <label for="">Email</label>
+                                <input value="<%= editStudentData.email %>" name="email" type="text" class="form-control">
+                            </div>
+                            <div class="my-3">
+                                <label for="">Cell</label>
+                                <input value="<%= editStudentData.cell %>" name="cell" type="text" class="form-control">
+                            </div>
+                            <div class="my-3">
+                                <label for="">Photo</label>
+                                <input value="<%= editStudentData.photo %>" type="hidden" name="oldphoto" id="">
+                                <input name="photo" type="file" class="">
+                            </div>
+                            <div class="my-3">
+                                <input value="update" type="submit" class="btn btn-primary">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
